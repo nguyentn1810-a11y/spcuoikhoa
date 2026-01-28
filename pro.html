@@ -16,13 +16,13 @@
   <header>
     <img src="ảnh/logo.png" alt="logo">
     <h1>Nguyên's Cinema</h1>
-    <p>&#x1F1F3</p>
+    <button class="buy-ticket-btn" onclick="openPayment('Chưa chọn phim')">Thanh toán</button>
     <a href="dangnhap.html"><i class="fa-regular fa-circle-user"></i></a>
   </header>
 
   <nav>
-    
-    
+
+
     <!-- Search box -->
     <form class="search-box" onsubmit="return false;">
       <input type="text" id="searchInput" placeholder="Tìm phim...">
@@ -62,6 +62,11 @@
             (Ngọc
             Xuân) về quê nhà, đổi lại, hồn ma của cô hứa sẽ trả cho họ chiếc nhẫn kim cương trị giá 9 tỷ. Ai sẽ là người
             giành được phần thưởng, hay chuyến đi sẽ bộc lộ phần xấu xa nhất bên trong họ?</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('Làm Giàu Với Ma')">Đặt vé & Dịch vụ</button>
+            </div>
+          </div>
           <label for="modal1" class="close-btn">Đóng</label>
         </div>
       </div>
@@ -88,6 +93,11 @@
             Lorraine Warrent đối mặt với một thế lực ác quỷ, kẻ đã reo rắc nỗi kinh hoàng cho gia đình Smurl trong suốt
             hơn một thập kỷ. Bộ phim lần này cũng được dựa trên một trong những vụ án có thật mà gia đình Warren đã trải
             qua.</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('The Conjuring: Nghi Lễ Cuối Cùng')">Đặt vé & Dịch vụ</button>
+            </div>  
+          </div>
           <label for="modal2" class="close-btn">Đóng</label>
         </div>
       </div>
@@ -119,6 +129,11 @@
             tri
             ân và tưởng nhớ những người con đã dâng hiến tuổi thanh xuân cho đất nước, mang âm hưởng của tình yêu, tình
             đồng đội thiêng liêng, là khát vọng hòa bình, hoà hợp dân tộc của nhân dân Việt Nam.</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('Mưa Đỏ')">Đặt vé & Dịch vụ</button>
+            </div>
+          </div>
           <label for="modal3" class="close-btn">Đóng</label>
         </div>
       </div>
@@ -147,15 +162,18 @@
             các
             nhân vật chính đối đầu nhóm Thượng Huyền mạnh nhất của Muzan; cùng bối cảnh Vô Hạn Thành phức tạp, kiến trúc
             đảo lộn và di chuyển liên tục hứa hẹn mang đến những trận chiến đấu đầy mãn nhãn.</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('Thanh Gươm Diệt Quỷ: Vô Hạn Thành')">Đặt vé & Dịch vụ</button>
+            </div>
+          </div>
           <label for="modal4" class="close-btn">Đóng</label>
         </div>
       </div>
 
       <!-- Card 5 -->
       <label for="modal5" class="movie-card">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/9/95/Chainsaw_Man_Reze_Arc_movie_poster.jpg"
-          alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/95/Chainsaw_Man_Reze_Arc_movie_poster.jpg" alt="">
         <div class="info">
           <h4>Chainsaw Man – The Movie: Chương Reze</h4>
           <p>Action | Anime | 100 mins</p>
@@ -164,18 +182,26 @@
       <input type="checkbox" id="modal5">
       <div class="overlay">
         <div class="modal">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/tAzAhDNdehs?si=Fp0JNPOXijaKjdEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tAzAhDNdehs?si=Fp0JNPOXijaKjdEs"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <h2>Chainsaw Man – The Movie: Chương Reze</h2>
-          <p>Chainsaw Man – The Movie: Chương Reze theo chân Denji khi anh gặp Reze – một cô gái bí ẩn mang đến cả tình yêu lẫn hiểm họa. Trong thế giới đầy quỷ dữ và phản bội, Denji phải chiến đấu để sống còn… và để hiểu trái tim mình.</p>
+          <p>Chainsaw Man – The Movie: Chương Reze theo chân Denji khi anh gặp Reze – một cô gái bí ẩn mang đến cả tình
+            yêu lẫn hiểm họa. Trong thế giới đầy quỷ dữ và phản bội, Denji phải chiến đấu để sống còn… và để hiểu trái
+            tim mình.</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('Chainsaw Man – The Movie: Chương Reze')">Đặt vé & Dịch vụ</button>
+            </div>
+          </div>
           <label for="modal5" class="close-btn">Đóng</label>
         </div>
       </div>
 
       <!-- Card 6 -->
       <label for="modal6" class="movie-card">
-        <img
-          src="ảnh/avatar.png"
-          alt="">
+        <img src="ảnh/avatar.png" alt="">
         <div class="info">
           <h4>Avatar: Dòng Chảy Của Nước</h4>
           <p>Action | Science Fiction | 190 mins</p>
@@ -184,14 +210,95 @@
       <input type="checkbox" id="modal6">
       <div class="overlay">
         <div class="modal">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gq2xKJXYZ80?si=SSMCxM1Kc6benldc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gq2xKJXYZ80?si=SSMCxM1Kc6benldc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <h2>Avatar: Dòng Chảy Của Nước</h2>
-          <p>Jake Sully sống cùng gia đình mới của mình trên hành tinh Pandora. Khi một mối đe dọa quen thuộc quay trở lại để kết thúc những gì đã bắt đầu trước đó, Jake phải hợp tác với Neytiri và quân đội của tộc Na'vi để bảo vệ hành tinh của họ.</p>
+          <p>Jake Sully sống cùng gia đình mới của mình trên hành tinh Pandora. Khi một mối đe dọa quen thuộc quay trở
+            lại để kết thúc những gì đã bắt đầu trước đó, Jake phải hợp tác với Neytiri và quân đội của tộc Na'vi để bảo
+            vệ hành tinh của họ.</p>
+          <div class="modal">
+            <div class="modal-footer">
+              <button class="booking-btn" onclick="openBooking('Avatar: Dòng Chảy Của Nước')">Đặt vé & Dịch vụ</button>
+            </div>
+          </div>
           <label for="modal6" class="close-btn">Đóng</label>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="paymentModal" class="payment-overlay">
+    <div class="payment-modal">
+      <span class="close-payment" onclick="closePayment()">&times;</span>
+      <h2>Thanh Toán Vé Xem Phim</h2>
+      <p id="selectedMovieText">Phim: </p>
+
+      <div class="payment-methods">
+        <h3>Chọn phương thức thanh toán:</h3>
+
+        <label class="method-option">
+          <input type="radio" name="pay-method" value="card" checked onclick="togglePaymentDetail('card')">
+          <span>Thanh toán bằng thẻ (Visa/Mastercard)</span>
+        </label>
+
+        <label class="method-option">
+          <input type="radio" name="pay-method" value="qr" onclick="togglePaymentDetail('qr')">
+          <span>Quét mã QR chuyển khoản</span>
+        </label>
+      </div>
+
+      <div id="cardDetail" class="payment-detail">
+        <input type="text" placeholder="Số thẻ (16 chữ số)">
+        <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="MM/YY">
+          <input type="text" placeholder="CVV">
+        </div>
+      </div>
+
+      <div id="qrDetail" class="payment-detail" style="display: none; text-align: center;">
+        <p>Vui lòng quét mã QR dưới đây để thanh toán:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=NguyenCinemaPayment" alt="QR Code">
+        <p>Nội dung: <strong>THANHTOAN VEPHIM</strong></p>
+      </div>
+
+      <button class="confirm-btn" onclick="processPayment()">Xác nhận thanh toán</button>
+    </div>
+  </div>
+
+<div id="bookingModal" class="booking-overlay">
+    <div class="booking-content">
+        <span class="close-booking" onclick="closeBooking()">×</span>
+        <h2 id="bookingMovieName">Tên Phim</h2>
+        
+        <div class="seat-selection">
+            <h3>Chọn chỗ ngồi:</h3>
+            <div class="screen">MÀN HÌNH</div>
+            <div id="seatGrid" class="seat-grid"></div>
+        </div>
+
+        <div class="extra-services">
+            <h3>Mua thêm Bỏng & Nước:</h3>
+            <div class="service-item">
+                <span>Bỏng ngô (60k)</span>
+                <input type="number" id="popcornQty" min="0" value="0" oninput="updateTotal()">
+            </div>
+            <div class="service-item">
+                <span>Nước ngọt (30k)</span>
+                <input type="number" id="waterQty" min="0" value="0" oninput="updateTotal()">
+            </div>
+        </div>
+
+        <div class="total-price">
+            Tổng cộng: <span id="totalAmount">0</span>đ
+        </div>
+
+        <button id="btnGoToPayment" class="next-to-pay-btn" onclick="goToPayment()">
+          Tiếp tục thanh toán
+        </button>
+    </div>
+</div>
 
   <footer>
     <div class="contact">

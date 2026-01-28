@@ -30,16 +30,38 @@ signUpForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const username = document.getElementById('username_up').value;
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password_up').value; // Giả định bạn có field này
+    const password = document.getElementById('password_up').value;
+    const confirmPassword = document.getElementById('confirm_password_up').value;
+
+    if (username.length < 8) {
+        alert("Tên đăng nhập phải có tối thiểu 8 ký tự!")
+    }
 
     if (!email.includes('@')) {
         alert("Email phải có ký tự @");
         return;
     }
 
+    if (password.length < 8) {
+        alert("Mật khẩu phải có tối thiểu 8 ký tự!");
+        return;
+    }
+
+    const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+    if (!specialChars.test(password)) {
+        alert("Mật khẩu phải chứa ít nhất một ký tự đặc biệt (ví dụ: !; @; #; $;...)");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Mật khẩu nhập lại không khớp! Vui lòng kiểm tra lại.");
+        document.getElementById('confirm_password_up').focus();
+        return;
+    }
+
     const users = getUsers();
 
-    // Kiểm tra xem username đã tồn tại chưa
+
     const userExists = users.find(u => u.username === username);
 
     if (userExists) {
@@ -74,3 +96,13 @@ signInForm.addEventListener('submit', (e) => {
         alert("Sai tên đăng nhập hoặc mật khẩu!");
     }
 });
+
+const resetData = () => {
+    if (confirm("Bạn có chắc chắn muốn xoá toàn bộ danh sách người dùng không?")) {
+        localStorage.removeItem('users');
+        alert("Đã xoá toàn bộ dữ liệu người dùng!");
+        location.reload(); // Tải lại trang để cập nhật trạng thái
+    }
+};
+
+// Bạn có thể gọi hàm này bằng cách gõ resetData() vào Console của trình duyệt
